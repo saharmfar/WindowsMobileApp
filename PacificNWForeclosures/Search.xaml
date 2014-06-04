@@ -1,0 +1,45 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="PacificNWForeclosures.Search"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock x:Name="ApplicationTitle" Text="FORECLOSURE" Style="{StaticResource PhoneTextNormalStyle}" Width="144" HorizontalAlignment="Left"/>
+            <Image Height="150" Name="image1" Stretch="Fill" Width="150" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,-25,35,0" Source="Images/GavelHi.jpg"/>
+            <TextBlock x:Name="PageTitle" Text="search" Margin="9,-150,0,0" Style="{StaticResource PhoneTextTitle1Style}" Width="223" HorizontalAlignment="Left" Height="99" />
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <TextBlock Height="45" HorizontalAlignment="Left" Margin="15,15,0,0" Name="address" Text="Search by Address" VerticalAlignment="Top" FontSize="32"/>
+            <TextBox InputScope="Digits" Height="72" HorizontalAlignment="Left" Margin="5,60,0,0" Name="addressSearch" Text="" VerticalAlignment="Top" Width="375" />
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="15,120,0,0" Name="houseNumber" Text="Please enter only the house number." VerticalAlignment="Top" />
+            <TextBlock Height="45" HorizontalAlignment="Left" Margin="15,210,0,0" Name="city" Text="Search by City" VerticalAlignment="Top" FontSize="32"/>
+            <TextBox Height="72" HorizontalAlignment="Left" Margin="5,255,0,0" Name="citySearch" Text="" VerticalAlignment="Top" Width="375" />
+            <TextBlock Height="45" HorizontalAlignment="Left" Margin="15,395,0,0" Name="zip" Text="Search by Zip Code" VerticalAlignment="Top" FontSize="32"/>
+            <TextBox InputScope="Digits" Height="72" HorizontalAlignment="Left" Margin="5,440,0,0" Name="zipSearch" Text="" VerticalAlignment="Top" Width="375" />
+            <Button Content="Go" Height="72" HorizontalAlignment="Left" Margin="374,60,0,0" Name="mAddressGo" VerticalAlignment="Top" Width="85" Click="mAddressGo_Click" />
+            <Button Content="Go" Height="72" HorizontalAlignment="Left" Margin="374,255,0,0" Name="mCityGo" VerticalAlignment="Top" Width="85" Click="mCityGo_Click" />
+            <Button Content="Go" Height="72" HorizontalAlignment="Left" Margin="374,440,0,0" Name="mZipGo" VerticalAlignment="Top" Width="85" Click="mZipGo_Click" />
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>

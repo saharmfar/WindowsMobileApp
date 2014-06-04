@@ -1,0 +1,57 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="PacificNWForeclosures.PropertyDetail"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock x:Name="ApplicationTitle" Text="PROPERTY" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock x:Name="PageTitle" Text="details" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="15,15,0,0" Name="addressBlock" Text="address" VerticalAlignment="Top" />
+            <Button Height="60" HorizontalAlignment="Left" Margin="0,30,0,0" Name="addressLink" VerticalAlignment="Top" BorderThickness="0.0" Click="addressLink_Click">
+                <TextBlock Height="45" HorizontalAlignment="Left" Margin="-9,-15,0,0" Name="addressData"  VerticalAlignment="Top" FontSize="36" TextDecorations="Underline"/>
+            </Button>
+            <Button Height="60" HorizontalAlignment="Left" Margin="0,70,0,0" Name="cityLink" VerticalAlignment="Top" BorderThickness="0.0" Click="addressLink_Click">
+                <TextBlock Height="45" HorizontalAlignment="Left" Margin="-9,-15,0,0" Name="cityData" VerticalAlignment="Top" FontSize="36" TextDecorations="Underline"/>
+            </Button>
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="15,140,0,0" Name="saleDateBlock" Text="sale date" VerticalAlignment="Top" />
+            <TextBlock Height="45" HorizontalAlignment="Left" Margin="15,160,0,0" Name="saleDate"  VerticalAlignment="Top" FontSize="36"/>
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="15,220,0,0" Name="saleLocationBlock" Text="sale location" VerticalAlignment="Top" />
+            <TextBlock Height="45" HorizontalAlignment="Left" Margin="15,240,0,0" Name="saleLocation" VerticalAlignment="Top" FontSize="36"/>
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="15,300,0,0" Name="totalDebtBlock" Text="total debt" VerticalAlignment="Top" />
+            <TextBlock Height="45" HorizontalAlignment="Left" Margin="15,320,0,0" Name="totalDebt"  VerticalAlignment="Top" FontSize="36"/>
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="15,390,0,0" Name="bedsBlock" Text="beds" VerticalAlignment="Top" />
+            <TextBlock Height="45" HorizontalAlignment="Left" Margin="70,375,0,0" Name="beds"  VerticalAlignment="Top" FontSize="36"/>
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="200,390,0,0" Name="bathsBlock" Text="baths" VerticalAlignment="Top" />
+            <TextBlock Height="45" HorizontalAlignment="Left" Margin="265,375,0,0" Name="baths" VerticalAlignment="Top" FontSize="36"/>
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="15,455,0,0" Name="sqftBlock" Text="sq ft" VerticalAlignment="Top" />
+            <TextBlock Height="45" HorizontalAlignment="Left" Margin="70,440,0,0" Name="sqft"  VerticalAlignment="Top" FontSize="36"/>
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="200,455,0,0" Name="lotSizeBlock" Text="lot size" VerticalAlignment="Top" />
+            <TextBlock Height="45" HorizontalAlignment="Left" Margin="275,440,0,0" Name="lotSize"  VerticalAlignment="Top" FontSize="36"/>
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="15,505,0,0" Name="assessedBlock" Text="assessed value" VerticalAlignment="Top" />
+            <TextBlock Height="45" HorizontalAlignment="Left" Margin="15,525,0,0" Name="assessed"  VerticalAlignment="Top" FontSize="36"/>
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>
